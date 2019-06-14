@@ -4,6 +4,7 @@ package GFG;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//for n meetings with their start time and end time how many rooms would be required at minimum
 
 public class HowManyRooms {
 

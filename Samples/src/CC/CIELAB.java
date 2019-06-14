@@ -1,3 +1,5 @@
+package CC;
+
 import java.util.Scanner;
 
 public class CIELAB {

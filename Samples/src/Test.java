@@ -1,3 +1,6 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 class Sample{
     String name;
     int age;
@@ -10,13 +13,28 @@ class Sample{
     }
 }
 public class Test {
+
+
     public static void main(String[] args) {
-        Sample prabin = new Sample("Prabin", 34, 1234);
-        Sample guru = new Sample("Guru", 28, 1235);
-        System.out.println(prabin.name+" "+guru.name);
-        prabin = guru;
-        guru = null;
-        System.out.println(prabin.name+" "+guru);
+        PriorityQueue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if(o1<o2){
+                    return 1;
+                }else{
+                    return -1;
+                }
+            }
+        });
+        q.add(5);
+        q.add(3);
+        q.add(7);
+        q.add(1);
+        System.out.println(q.remove());
+        System.out.println(q.remove());
+        System.out.println(q.remove());
+
+        System.out.println(System.getProperty("sun.arch.data.model"));
     }
 
 
